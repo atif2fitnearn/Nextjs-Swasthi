@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function DetailedProgress() {
   return (
-    <div className="flex flex-col w-full overflow-hidden md:flex-row justify-between px-4 md:px-10">
+    <div className="flex flex-col h-full w-full overflow-hidden md:flex-row justify-between px-4 md:px-10">
       <div
         className="w-full md:w-[463px] h-auto md:h-[600px] gap-10 ml-0 md:ml-10 px-4 md:px-0"
         data-aos="fade-up"
@@ -11,7 +11,6 @@ export default function DetailedProgress() {
           <div
             className="w-full h-auto md:h-[177px]"
             data-aos="slide-right"
-            data-aos-delay="200"
           >
             <p className="font-roboto text-[24px] md:text-[40px] font-black leading-[32px] md:leading-[58.59px] text-left text-neutral-100">
               Detailed Progress Tracking with Smart{" "}
@@ -29,10 +28,9 @@ export default function DetailedProgress() {
           <div
             className="w-full md:w-[423px] h-auto my-2"
             data-aos="slide-left"
-            data-aos-delay="400"
           >
             <p className="text-neutral-300 text-xs md:text-base">
-              Stay informed and motivated with Swasthi’s advanced progress
+              Stay informed and motivated with Swasthi&apos;s advanced progress
               tracking, offering weekly, monthly, and yearly smart reports for
               all your health metrics.
             </p>
@@ -42,7 +40,6 @@ export default function DetailedProgress() {
           <div
             className="w-full h-auto gap-[16px] flex"
             data-aos="slide-right"
-            data-aos-delay="600"
           >
             <div className="w-10 md:w-16 my-0.5">
               <Image
@@ -68,7 +65,6 @@ export default function DetailedProgress() {
           <div
             className="w-full h-auto gap-[16px] flex"
             data-aos="slide-left"
-            data-aos-delay="800"
           >
             <div className="w-10 md:w-16 my-0.5">
               <Image
@@ -94,7 +90,6 @@ export default function DetailedProgress() {
           <div
             className="w-full h-auto gap-[16px] flex"
             data-aos="slide-right"
-            data-aos-delay="1000"
           >
             <div className="w-10 md:w-16 my-0.5">
               <Image
@@ -123,11 +118,11 @@ export default function DetailedProgress() {
         <Image
           unoptimized={true}
           quality={100}
-          width={300}
-          height={300}
+          width={250}
+          height={250}
           src="/Group 1000005330.png"
           alt="Health Progress Visualization"
-          className="w-full max-w-xs md:max-w-full z-50"
+          className="w-96 max-w-xs md:max-w-full z-50"
         />
       </div>
     </div>

@@ -66,58 +66,50 @@ const Pricing = forwardRef<HTMLElement>((_, ref) => {
           key={index}
           className={`flex flex-col items-start p-6 rounded-[16px] w-full max-w-[354px] ${plan.cardStyle} cursor-pointer`}
           data-aos="fade-up"
-          data-aos-delay={index * 200} // Adds delay to stagger animations
-        >
+         >
           <div className="w-full flex justify-between items-center">
             <h1
               className="text-[24px] text-[#F5F5F5] font-bold"
               data-aos="fade"
-              data-aos-delay={index * 300}
-            >
+             >
               {plan.title}
             </h1>
             <span
               className={`text-[12px] text-black font-bold py-1 px-3 rounded ${plan.tagColor}`}
               data-aos="fade"
-              data-aos-delay={index * 400}
-            >
+             >
               {plan.tag}
             </span>
           </div>
           <h2
             className="text-[18px] text-[#D4D4D4] font-normal mt-2"
             data-aos="fade"
-            data-aos-delay={index * 500}
-          >
+           >
             Starting at
           </h2>
           <h1
             className="text-[48px] text-[#F5F5F5] font-bold mt-2"
             data-aos="fade"
-            data-aos-delay={index * 600}
-          >
+           >
             {plan.price}{" "}
             <span className="text-[14px] font-normal">{plan.period}</span>
           </h1>
           <h3
             className="text-[18px] text-[#F5F5F5] font-medium mt-4"
             data-aos="fade"
-            data-aos-delay={index * 700}
-          >
+           >
             {plan.subscriptionType}
           </h3>
           <p
             className="text-[14px] text-[#E5E5E5] font-normal mt-2"
             data-aos="fade"
-            data-aos-delay={index * 800}
-          >
+           >
             {plan.description}
           </p>
           <div
             className="mt-6 flex flex-col gap-3"
             data-aos="fade-up"
-            data-aos-delay={index * 900}
-          >
+           >
             {plan.features.map((feature, featureIndex) => (
               <div
                 key={featureIndex}
@@ -142,6 +134,5 @@ const Pricing = forwardRef<HTMLElement>((_, ref) => {
 });
 
 Pricing.displayName = "Pricing";
-
 
 export default Pricing;

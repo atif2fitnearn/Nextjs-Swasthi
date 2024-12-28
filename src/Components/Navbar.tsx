@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({
               e.preventDefault();
               scrollToHome(); // Scroll to home
             }}
-          />
+           />
           <h1 className="text-orange-500 text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
             <Image
               unoptimized={true}
@@ -53,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 e.preventDefault();
                 scrollToHome(); // Scroll to home
               }}
-            />
+             />
           </h1>
         </div>
 
@@ -75,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   }
                 }}
                 className="relative flex items-center space-x-2 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[3px] after:rounded-lg after:bg-orange-400 after:transition-all after:duration-500 hover:after:w-[110%] rounded-lg text-neutral-200   transition duration-300"
-              >
+               >
                 {item}
               </a>
             </li>
@@ -84,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className="hidden sm:block mr-5">
           <button className="bg-gradient-to-r from-orange-500 to-yellow-500 font-bold text-white px-4 py-2 rounded-xl hover:scale-105 transition duration-300">
             Download Now
-          </button>
+          </button> 
         </div>
 
         {/* Hamburger Menu Button (Mobile) */}
@@ -140,6 +140,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   setIsSidebarOpen(false); // Close sidebar after click
                 }}
                 className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold px-6 py-3 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg p-4  flex items-center space-x-3"
+                
               >
                 {item}
               </a>
