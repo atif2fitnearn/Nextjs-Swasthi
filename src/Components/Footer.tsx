@@ -109,6 +109,7 @@ const Footer: React.FC = () => {
               { label: "Terms & Conditions", href: "/TermsAndConditions" },
               { label: "Privacy Policy", href: "/PrivacyPolicy" },
               { label: "Data Deletion Policy", href: "/DataDeletionPolicy" },
+              { label: "Return & Refund", href: "/ReturnAndRefund" },
             ].map((link, index) => (
               <li key={index}>
                 <Link

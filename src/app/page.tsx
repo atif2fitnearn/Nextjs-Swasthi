@@ -13,10 +13,9 @@ import Pricing from "../Components/Prices";
 import HowitWorksMobile from "../Components/5";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import  Link from 'next/link';
+import Link from "next/link";
 
 export default function Main() {
-
   const featuresRef = useRef<HTMLElement | null>(null);
   const howItWorksDesktopRef = useRef<HTMLElement | null>(null);
   const howItWorksMobileRef = useRef<HTMLElement | null>(null);

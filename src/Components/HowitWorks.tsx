@@ -40,16 +40,13 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
         >
           <div
             className="w-full md:w-[300px] space-y-8 text-center md:text-right"
-          >
-            <div className="space-y-4"
             data-aos="slide-right"
-            >
-              <p className="text-neutral-100 font-roboto text-[16px] md:text-[20px] font-bold"
-               >
+          >
+            <div className="space-y-4">
+              <p className="text-neutral-100 font-roboto text-[16px] md:text-[20px] font-bold">
                 Download App
               </p>
-              <div className="flex justify-center md:justify-end gap-2"
-               >
+              <div className="flex justify-center md:justify-end gap-2">
                 <Image
                   unoptimized={true}
                   quality={100}
@@ -67,15 +64,12 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
                   alt="Google play"
                 />
               </div>
-              <p className="font-roboto text-[12px] md:text-[14px] text-neutral-300"
-              >
+              <p className="font-roboto text-[12px] md:text-[14px] text-neutral-300">
                 Download Swasthi on your favourite device. Available on both iOS
                 and Android platforms.
               </p>
             </div>
-            <div className="w-full md:w-[300px]"
-            data-aos="slide-right"
-            >
+            <div className="w-full md:w-[300px]">
               <Image
                 unoptimized={true}
                 quality={100}
@@ -86,9 +80,7 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
                 className="mx-auto"
               />
             </div>
-            <div className="space-y-4"
-            data-aos="slide-right"
-            >
+            <div className="space-y-4">
               <p className="text-neutral-100 font-roboto text-[16px] md:text-[20px] font-bold">
                 You&apos;re Done
               </p>
@@ -145,10 +137,9 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
           </div>
           <div
             className="w-full md:w-[300px] space-y-8 text-center md:text-left"
-          >
-            <div className="w-full md:w-[300px]"
             data-aos="slide-left"
-            >
+          >
+            <div className="w-full md:w-[300px]">
               <Image
                 unoptimized={true}
                 quality={100}
@@ -159,9 +150,7 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
                 className="mx-auto"
               />
             </div>
-            <div className="space-y-4"
-            data-aos="slide-left"
-            >
+            <div className="space-y-4">
               <p className="text-neutral-100 font-roboto text-[16px] md:text-[20px] font-bold">
                 Create Account
               </p>
@@ -174,9 +163,7 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
                 premium features.
               </p>
             </div>
-            <div className="w-full md:w-[300px]"
-            data-aos="slide-left"
-            >
+            <div className="w-full md:w-[300px]">
               <Image
                 unoptimized={true}
                 quality={100}
@@ -191,7 +178,7 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
       <div
-        className="w-[80%] max-w-[720px] mx-auto"
+        className="w-[80%] max-w-[720px] mx-auto bg-cover"
         data-aos="zoom-out"
       >
         {/* Clickable video image */}
@@ -203,18 +190,15 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
             height={300}
             src="/Video.png"
             alt="video_img"
-            className="translate-y-[-60px] cursor-pointer w-full h-auto animate-floating"
+            className="-translate-y-20 cursor-pointer w-full h-auto"
             onClick={handleVideoClick}
           />
         ) : (
           // Display video in place of image when clicked
           <iframe
-            width="100%"
-            height="400"
             src="/-034a-434f-ab20-1f24ac408882.mp4"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+            frameBorder="1"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope;"
           />
         )}
       </div>

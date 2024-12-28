@@ -11,6 +11,7 @@ export default function DetailedProgress() {
           <div
             className="w-full h-auto md:h-[177px]"
             data-aos="slide-right"
+            data-aos-delay="0"
           >
             <p className="font-roboto text-[24px] md:text-[40px] font-black leading-[32px] md:leading-[58.59px] text-left text-neutral-100">
               Detailed Progress Tracking with Smart{" "}
@@ -28,6 +29,7 @@ export default function DetailedProgress() {
           <div
             className="w-full md:w-[423px] h-auto my-2"
             data-aos="slide-left"
+            data-aos-delay="0"
           >
             <p className="text-neutral-300 text-xs md:text-base">
               Stay informed and motivated with Swasthi&apos;s advanced progress
@@ -40,6 +42,7 @@ export default function DetailedProgress() {
           <div
             className="w-full h-auto gap-[16px] flex"
             data-aos="slide-right"
+            data-aos-delay="0"
           >
             <div className="w-10 md:w-16 my-0.5">
               <Image
@@ -65,6 +68,7 @@ export default function DetailedProgress() {
           <div
             className="w-full h-auto gap-[16px] flex"
             data-aos="slide-left"
+            data-aos-delay="0"
           >
             <div className="w-10 md:w-16 my-0.5">
               <Image
@@ -90,6 +94,7 @@ export default function DetailedProgress() {
           <div
             className="w-full h-auto gap-[16px] flex"
             data-aos="slide-right"
+            data-aos-delay="0"
           >
             <div className="w-10 md:w-16 my-0.5">
               <Image

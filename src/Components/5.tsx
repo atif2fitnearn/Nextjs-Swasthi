@@ -1,8 +1,6 @@
 import { Timeline } from "./ui/timeline";
-import { useState, forwardRef, useEffect } from "react";
+import { useState, forwardRef } from "react";
 import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 interface ContentType {
   title: string;
@@ -43,14 +41,8 @@ const HowitWorksMobile = forwardRef<HTMLElement>((_, ref) => {
     setIsVideoPlaying(true);
   };
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-    });
-  }, []);
 
-  return (
+  return ( 
     <>
       <section ref={ref} className="block md:hidden w-full">
         <Timeline data={Data} />
