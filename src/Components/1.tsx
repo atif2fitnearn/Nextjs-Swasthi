@@ -1,8 +1,9 @@
-import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
+import Image from "next/image";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "./ui/dialog";
 
 const HealthJourney = () => {
   return (
-    <section className=" w-full overflow-hidden bg-black text-white py-12 px-6 sm:px-8 md:px-16">
+    <section className="w-full overflow-hidden bg-black text-white py-12 px-6 sm:px-8 md:px-16">
       <div className="flex flex-col md:flex-row md:space-x-8 items-center justify-between space-y-8 md:space-y-0">
         <div className="md:w-1/2">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
@@ -27,7 +28,7 @@ const HealthJourney = () => {
             <Dialog>
               <DialogTrigger asChild>
                 <button className="relative inline-flex h-auto overflow-hidden bg-gradient-to-r from-orange-500 to-yellow-500 border-2 border-white rounded-[8px]">
-                  <span className="inline-flex h-[61px] w-full gap-1 md:gap-[14px] cursor-pointer items-center justify-center rounded-[8px]  py-2 md:py-[15px] px-3 md:px-[21px] text-sm font-medium text-white backdrop-blur-3xl">
+                  <span className="inline-flex h-[61px] w-full gap-1 md:gap-[14px] cursor-pointer items-center justify-center rounded-[8px] py-2 md:py-[15px] px-3 md:px-[21px] text-sm font-medium text-white backdrop-blur-3xl">
                     <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -48,18 +49,18 @@ const HealthJourney = () => {
                       </svg>
                     </span>
                     <div className="text-left">
-                        <span className="block text-xs font-bold leading-tight">
-                          Download on the
-                        </span>
-                        <span className="block text-lg font-semibold leading-tight">
-                          App Store
-                        </span>
-                      </div>
+                      <span className="block text-xs font-bold leading-tight">
+                        Download on the
+                      </span>
+                      <span className="block text-lg font-semibold leading-tight">
+                        App Store
+                      </span>
+                    </div>
                   </span>
                 </button>
               </DialogTrigger>
               <DialogContent className="download-btn-modal-card w-[300px] md:w-full sm:max-w-[495px] flex flex-col justify-center items-center pb-8">
-                <h6>Comming Soon</h6>
+                <DialogTitle>Coming Soon</DialogTitle>
                 <h4 className="w-[240px] md:w-[300px] text-[#E5E5E5] text-[24px] md:text-[33px] text-center leading-normal">
                   Scan & Download{" "}
                   <span className="mid-heading bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent font-bold text-[28px] md:text-[38px]">
@@ -73,7 +74,7 @@ const HealthJourney = () => {
             <Dialog>
               <DialogTrigger asChild>
                 <button className="relative inline-flex h-auto bg-gradient-to-r from-orange-600 to-yellow-500 overflow-hidden border-2 border-white rounded-[8px]">
-                  <span className="inline-flex h-[61px] w-full gap-1 md:gap-[14px] cursor-pointer items-center justify-center rounded-[8px]  py-2 md:py-[15px] px-3 md:px-[21px] text-sm font-medium text-white  ">
+                  <span className="inline-flex h-[61px] w-full gap-1 md:gap-[14px] cursor-pointer items-center justify-center rounded-[8px] py-2 md:py-[15px] px-3 md:px-[21px] text-sm font-medium text-white">
                     <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +114,14 @@ const HealthJourney = () => {
                 </button>
               </DialogTrigger>
               <DialogContent className="download-btn-modal-card w-[300px] md:w-full sm:max-w-[495px] flex flex-col justify-center items-center pb-8">
-                <h6>Comming Soon</h6>
+                <DialogTitle>
+                  <Image
+                    src="/qrcode.png"
+                    alt="qr not loaded"
+                    width={150}
+                    height={150}
+                  />
+                </DialogTitle>
                 <h4 className="w-[240px] md:w-[300px] text-[#E5E5E5] text-[24px] md:text-[33px] text-center leading-normal">
                   Scan & Download{" "}
                   <span className="mid-heading bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent font-bold text-[28px] md:text-[38px]">
@@ -129,28 +137,43 @@ const HealthJourney = () => {
         <div className="md:w-1/2 flex items-center justify-center relative animate-floating">
           <div className="relative w-full max-w-lg">
             <div className="w-[100%] h-[100%]">
-              <img
+              <Image
                 src="/Ellipse.png"
                 alt="Background Ellipse"
                 className="z-0"
+                width={500}
+                height={500}
+                quality={100}
+                 loading="eager"
               />
             </div>
             <div>
-              <img
+              <Image
                 src="/Mockup Mobile.png"
                 alt="Mobile Mockup"
-                className="absolute w-[75%] z-[1]  h-auto top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 sm:w-[75%] md:w-[75%] lg:w-[75%]"
+                className="absolute w-[75%] z-[1] h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:w-[75%] md:w-[75%] lg:w-[75%]"
+                width={500}
+                height={500}
+                quality={100}
+                 loading="eager"
               />
-              <img
+              <Image
                 src="/Circle (1).png"
                 alt="Decorative Circle 1"
                 className="absolute w-16 sm:w-20 md:w-24 top-[50%] left-[5%] md:left-[5%] transform -translate-y-1/2 z-40"
+                width={50}
+                height={50}
+                quality={100}
+                 loading="eager"
               />
-
-              <img
+              <Image
                 src="/Circle (2).png"
                 alt="Decorative Circle 2"
                 className="absolute w-16 sm:w-20 md:w-24 top-[70%] left-[30%] md:left-[30%] transform -translate-y-1/2 z-40"
+                width={50}
+                height={50}
+                quality={100}
+                loading="eager"
               />
             </div>
           </div>

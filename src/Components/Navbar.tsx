@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface NavbarProps {
   scrollToFeatures: () => void;
@@ -26,7 +27,11 @@ const Navbar: React.FC<NavbarProps> = ({
       <nav className="bg-zinc-950/70 backdrop-blur-md sticky top-0 z-50 px-4 md:px-11 py-4 flex items-center justify-between shadow-md transition duration-300">
         <div className="flex items-center space-x-2 ml-5 cursor-pointer">
           {/* Make the logo clickable to go to top of the page */}
-          <img
+          <Image
+            unoptimized={true}
+            quality={100}
+            width={50}
+            height={50}
             src="/Logo.png"
             alt="logo"
             className="w-8 h-8"
@@ -36,7 +41,11 @@ const Navbar: React.FC<NavbarProps> = ({
             }}
           />
           <h1 className="text-orange-500 text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
-            <img
+            <Image
+              unoptimized={true}
+              quality={100}
+              width={50}
+              height={50}
               src="/Swasthi.png"
               className="h-6 w-auto"
               alt=""
@@ -130,7 +139,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   }
                   setIsSidebarOpen(false); // Close sidebar after click
                 }}
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold px-6 py-3 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg p-4  flex items-center space-x-3" 
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold px-6 py-3 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg p-4  flex items-center space-x-3"
               >
                 {item}
               </a>

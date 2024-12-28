@@ -1,20 +1,29 @@
+import Image from "next/image";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { IoLogoInstagram } from "react-icons/io5";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa6";
-
-const Footer = () => {
+import { FaFacebookF, FaTwitter } from "react-icons/fa6";
+import Link from "next/link";
+const Footer: React.FC = () => {
   return (
     <footer className="bg-custom-gradient text-white py-8">
-      <div className=" w-[90%] max-w-7xl mx-auto flex flex-wrap justify-evenly space-y-8 md:space-y-0">
+      <div className="w-[90%] max-w-7xl mx-auto flex flex-wrap justify-evenly space-y-8 md:space-y-0">
+        {/* Logo and Description Section */}
         <div className="w-full md:w-1/2 lg:flex-1 px-4">
           <div className="flex items-center space-x-2">
-            <img src="/Logo.png" alt="logo" className="w-8 h-8" />
+            <Image
+              unoptimized={true}
+              quality={100}
+              width={50}
+              height={50}
+              src="/Logo.png"
+              alt="logo"
+            />
             <h1 className="text-orange-500 text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
-              <img
+              <Image
                 src="/Swasthi.png"
-                className="h-6 w-auto"
                 alt="Swasthi Logo"
+                width={96}
+                height={24}
               />
             </h1>
           </div>
@@ -25,7 +34,13 @@ const Footer = () => {
           </p>
           <p className="mt-4 text-sm">
             <a href="mailto:help-support@fitnearn.com">
-              <img src="/email.png" alt="Email Icon" className="inline mr-2" />
+              <Image
+                src="/email.png"
+                alt="Email Icon"
+                width={16}
+                height={16}
+                className="inline mr-2"
+              />
               help-support@fitnearn.com
             </a>
           </p>
@@ -33,6 +48,7 @@ const Footer = () => {
             <a
               href="https://x.com/fitnearn"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="Twitter"
               className="bg-gray-700 p-2 rounded-full"
             >
@@ -41,6 +57,7 @@ const Footer = () => {
             <a
               href="https://www.facebook.com/fitnearn"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="bg-gray-700 p-2 rounded-full"
             >
@@ -49,6 +66,7 @@ const Footer = () => {
             <a
               href="https://www.instagram.com/fitearn"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="bg-gray-700 p-2 rounded-full"
             >
@@ -56,8 +74,9 @@ const Footer = () => {
             </a>
             <a
               href="https://www.linkedin.com/company/fit-n-earn/"
-              aria-label="Linkedin"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Linkedin"
               className="bg-gray-700 p-2 rounded-full"
             >
               <TiSocialLinkedin />
@@ -65,95 +84,86 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Useful Links Section */}
         <div className="w-1/2 md:w-1/4 lg:flex-1 px-4">
           <h4 className="font-semibold text-lg mb-4">Useful Links</h4>
           <ul className="space-y-4 text-sm text-justify">
-            <li>
-              <a href="#" className="hover:text-orange-500 text-gray-200">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-orange-500 text-gray-200">
-                Features
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-orange-500 text-gray-200">
-                How it works
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-orange-500 text-gray-200">
-                Pricing
-              </a>
-            </li>
+            {["Home", "Features", "How it works", "Pricing"].map(
+              (link, index) => (
+                <li key={index}>
+                  <a href="#" className="hover:text-orange-500 text-gray-200">
+                    {link}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </div>
 
+        {/* Help & Support Section */}
         <div className="w-1/2 md:w-1/4 lg:flex-1 px-4">
           <h4 className="font-semibold text-lg mb-4">Help & Support</h4>
           <ul className="space-y-4 text-sm text-justify">
-            <li>
-              <a href="https://fitnearn.com/about-us" target="_blank" className="hover:text-orange-500 text-gray-200">
-                About us
-              </a>
-            </li>
-            <li>
-              <a href="https://fitnearn.com/terms-and-conditions" target="_blank" className="hover:text-orange-500 text-gray-200">
-                Terms & Conditions
-              </a>
-            </li>
-            <li>
-              <a href="https://fitnearn.com/privacy-policy" target="_blank" className="hover:text-orange-500 text-gray-200">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" className="hover:text-orange-500 text-gray-200">
-                Data Delition Policy
-              </a>
-            </li>
+            {[
+              { label: "About us", href: "/Aboutus" },
+              { label: "Terms & Conditions", href: "/TermsAndConditions" },
+              { label: "Privacy Policy", href: "/PrivacyPolicy" },
+              { label: "Data Deletion Policy", href: "/DataDeletionPolicy" },
+            ].map((link, index) => (
+              <li key={index}>
+                <Link
+                  href={link.href}
+                  className="hover:text-orange-500 text-gray-200"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
+        {/* Download App Section */}
         <div className="w-full md:w-1/2 lg:flex-1 px-4">
           <h4 className="font-semibold text-lg mb-4">Download App</h4>
           <div className="flex flex-wrap gap-2">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center gap-2 border-2 bg-gradient-to-r from-orange-600 to-yellow-500 text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-            >
-              <img src="/apple.png" alt="App Store" className="w-6 h-6 " />
-              <div className="text-left">
-                <span className="block text-xs font-bold leading-tight">
-                  Download on the
-                </span>
-                <span className="block text-lg font-semibold leading-tight">
-                  App Store
-                </span>
-              </div>
-            </a>
-
-            <a
-              href="#"
-              className="inline-flex items-center justify-center gap-2 border-2 bg-gradient-to-r from-orange-600 to-yellow-500 text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-            >
-              <img src="/playstore.png" alt="Google Play" className="w-6 h-6" />
-              <div className="text-left">
-                <span className="block text-xs font-bold leading-tight">
-                  Get it on
-                </span>
-                <span className="block text-lg font-semibold leading-tight">
-                  Google Play
-                </span>
-              </div>
-            </a>
+            {[
+              {
+                platform: "App Store",
+                src: "/apple.png",
+                label: "Download on the",
+              },
+              {
+                platform: "Google Play",
+                src: "/playstore.png",
+                label: "Get it on",
+              },
+            ].map((app, index) => (
+              <a
+                href="#"
+                key={index}
+                className="inline-flex items-center justify-center gap-2 border-2 bg-gradient-to-r from-orange-600 to-yellow-500 text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+              >
+                <Image
+                  src={app.src}
+                  alt={app.platform}
+                  width={24}
+                  height={24}
+                />
+                <div className="text-left">
+                  <span className="block text-xs font-bold leading-tight">
+                    {app.label}
+                  </span>
+                  <span className="block text-lg font-semibold leading-tight">
+                    {app.platform}
+                  </span>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </div>
-    <br />
-      <hr className=" m-auto w-[85%] pt-10" />
+      <br />
+      <hr className="m-auto w-[85%] pt-10" />
       <div className="flex flex-col md:flex-row justify-between text-center text-sm px-28 space-y-4 md:space-y-0">
         <p>© Copyright 2024, All Rights Reserved.</p>
         <p>Made with ❤️ in India</p>

@@ -12,7 +12,7 @@ export default function DefaultLayout({
 }) {
   useEffect(() => {
     AOS.init({
-      once: true,
+      once: false,
       disable: "phone",
       duration: 700,
       easing: "ease-out-cubic",
@@ -24,8 +24,9 @@ export default function DefaultLayout({
  
  <html lang="en">
       <head>
-        {/* Include any head elements like meta tags, title, etc. */}
-      </head>
+        <title>Swasthi</title>
+        <link rel="icon" type="image/png" href="/Logo.png" sizes="16x16" />
+       </head>
       <body>
         {children}
       </body>

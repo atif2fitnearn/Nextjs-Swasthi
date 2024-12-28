@@ -13,8 +13,10 @@ import Pricing from "../Components/Prices";
 import HowitWorksMobile from "../Components/5";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import  Link from 'next/link';
 
 export default function Main() {
+
   const featuresRef = useRef<HTMLElement | null>(null);
   const howItWorksDesktopRef = useRef<HTMLElement | null>(null);
   const howItWorksMobileRef = useRef<HTMLElement | null>(null);
@@ -51,13 +53,14 @@ export default function Main() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className="w-full">
+    <div className="w-full bg-black">
       <Navbar
         scrollToHome={scrollToHome}
         scrollToFeatures={scrollToFeatures}
         scrollToHowItWorks={scrollToHowItWorks}
         scrollToPricing={scrollToPricing}
       />
+      <Link href="/AboutUs">AboutUs</Link>
       <HealthJourney />
       <FeaturesSection ref={featuresRef} />
       <DetailedProgress />

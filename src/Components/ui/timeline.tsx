@@ -1,6 +1,7 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 interface TimelineEntry {
   title: string;
@@ -77,7 +78,11 @@ export const Timeline = ({ data }: TimelineProps) => {
               </p>
             </div>
             <div className="ml-16 md:w-2/3">
-              <img
+               <Image
+                                unoptimized={true}
+                                quality={100}
+                                  width={50}
+                                  height={300}
                 src={item.image}
                 alt={item.title}
                 className="w-full rounded-lg shadow-lg"

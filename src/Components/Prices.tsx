@@ -1,4 +1,5 @@
-import { forwardRef } from 'react';
+import { forwardRef } from "react";
+import Image from "next/image";
 
 const pricingData = [
   {
@@ -55,9 +56,11 @@ const pricingData = [
 ];
 
 const Pricing = forwardRef<HTMLElement>((_, ref) => {
-
   return (
-    <section ref={ref} className="overflow-hidden flex flex-col md:flex-row justify-center items-center w-full h-auto md:h-[600px] gap-6 py-10">
+    <section
+      ref={ref}
+      className="overflow-hidden flex flex-col md:flex-row justify-center items-center w-full h-auto md:h-[600px] gap-6 py-10"
+    >
       {pricingData.map((plan, index) => (
         <div
           key={index}
@@ -74,7 +77,7 @@ const Pricing = forwardRef<HTMLElement>((_, ref) => {
               {plan.title}
             </h1>
             <span
-              className={`text-[12px] text-black font-medium py-1 px-3 rounded ${plan.tagColor}`}
+              className={`text-[12px] text-black font-bold py-1 px-3 rounded ${plan.tagColor}`}
               data-aos="fade"
               data-aos-delay={index * 400}
             >
@@ -120,7 +123,14 @@ const Pricing = forwardRef<HTMLElement>((_, ref) => {
                 key={featureIndex}
                 className="flex items-center gap-2 text-[#F5F5F5] text-[14px]"
               >
-                <img src="/check-circle-1.png" alt="none" />
+                <Image
+                  unoptimized={true}
+                  quality={100}
+                  width={20}
+                  height={20}
+                  src="/check-circle-1.png"
+                  alt="none"
+                />
                 <span>{feature}</span>
               </div>
             ))}
@@ -130,5 +140,8 @@ const Pricing = forwardRef<HTMLElement>((_, ref) => {
     </section>
   );
 });
+
+Pricing.displayName = "Pricing";
+
 
 export default Pricing;

@@ -1,4 +1,5 @@
 import { useState, forwardRef } from "react";
+import Image from "next/image";
 
 const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
   // State to manage video play
@@ -46,8 +47,22 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
                 Download App
               </p>
               <div className="flex justify-center md:justify-end gap-2">
-                <img src="/applestore.png" alt="Apple store" />
-                <img src="/googleplay.png" alt="Google play" />
+                <Image
+                  unoptimized={true}
+                  quality={100}
+                  width={20}
+                  height={20}
+                  src="/applestore.png"
+                  alt="Apple store"
+                />
+                <Image
+                  unoptimized={true}
+                  quality={100}
+                  width={20}
+                  height={20}
+                  src="/googleplay.png"
+                  alt="Google play"
+                />
               </div>
               <p className="font-roboto text-[12px] md:text-[14px] text-neutral-300">
                 Download Swasthi on your favourite device. Available on both iOS
@@ -55,17 +70,25 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
               </p>
             </div>
             <div className="w-full md:w-[300px]">
-              <img src="/Frame 2608479.png" alt="login" className="mx-auto" />
+              <Image
+                unoptimized={true}
+                quality={100}
+                width={300}
+                height={300}
+                src="/Frame 2608479.png"
+                alt="login"
+                className="mx-auto"
+              />
             </div>
             <div className="space-y-4">
               <p className="text-neutral-100 font-roboto text-[16px] md:text-[20px] font-bold">
-                You're Done
+                You&apos;re Done
               </p>
               <p className="text-neutral-100 font-roboto font-bold">
                 Enjoy the Experience
               </p>
               <p className="font-roboto text-[12px] md:text-[14px] text-neutral-300">
-                Explore the app's amazing features, track your progress, and
+                Explore the app&apos;s amazing features, track your progress, and
                 share Swasthi with friends and family to inspire their health
                 journey.
               </p>
@@ -75,22 +98,38 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
             className="m-0 h-full xl:block md:block hidden"
             data-aos="zoom-in"
           >
-            <img
+            <Image
+              unoptimized={true}
+              quality={100}
+              width={2}
+              height={3}
               src="/Rectangle 7.png"
               alt="rectangle"
-              className="ml-14 mt-0 absolute "
+              className="ml-14 mt-0 h-[100%] absolute "
             />
-            <img
+            <Image
+              unoptimized={true}
+              quality={100}
+              width={60}
+              height={60}
               src="/Circle1.png"
               alt="circle1"
               className="h-[60px] w-[60px] rounded-full relative z-10 ml-7 mt-[60px]"
             />
-            <img
+            <Image
+              unoptimized={true}
+              quality={100}
+              width={60}
+              height={60}
               src="/Circle2.png"
               alt="circle2"
               className="h-[60px] w-[60px] rounded-full relative z-10 my-[120px] ml-7"
             />
-            <img
+            <Image
+              unoptimized={true}
+              quality={100}
+              width={60}
+              height={60}
               src="/Circle3.png"
               alt="circle3"
               className="h-[60px] w-[60px] rounded-full relative z-10 mb-[50px] ml-7"
@@ -101,7 +140,11 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
             data-aos="slide-left"
           >
             <div className="w-full md:w-[300px]">
-              <img
+              <Image
+                unoptimized={true}
+                quality={100}
+                width={300}
+                height={300}
                 src="/Frame 2608478.png"
                 alt="download_app"
                 className="mx-auto"
@@ -121,7 +164,11 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
               </p>
             </div>
             <div className="w-full md:w-[300px]">
-              <img
+              <Image
+                unoptimized={true}
+                quality={100}
+                width={300}
+                height={300}
                 src="/Frame 2608479 (1).png"
                 alt="done"
                 className="mx-auto"
@@ -131,12 +178,16 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
       <div
-        className="w-[80%] max-w-[720px] mx-auto "
+        className="w-[80%] max-w-[720px] mx-auto animate-floating"
         data-aos="zoom-out"
       >
         {/* Clickable video image */}
         {!isVideoPlaying ? (
-          <img
+          <Image
+            unoptimized={true}
+            quality={100}
+            width={50}
+            height={300}
             src="/Video.png"
             alt="video_img"
             className="translate-y-[-60px] cursor-pointer w-full h-auto"
@@ -157,5 +208,7 @@ const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
     </section>
   );
 });
+
+HowItWorks.displayName = "HowItWorks";
 
 export default HowItWorks;

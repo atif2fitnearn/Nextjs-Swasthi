@@ -1,8 +1,9 @@
 "use client";
 
-import 'aos/dist/aos.css'; // Import AOS styles
-import AOS from 'aos';
-import { useEffect } from 'react';
+import Image from "next/image";
+import "aos/dist/aos.css"; // Import AOS styles
+import AOS from "aos";
+import { useEffect } from "react";
 
 export default function PricingTitle() {
   useEffect(() => {
@@ -40,11 +41,16 @@ export default function PricingTitle() {
         data-aos-delay="600"
       >
         <p className="text-neutral-300 font-roboto text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[1.25] text-center underline-offset-auto decoration-slice">
-          Choose the Swasthi plan that fits your needs and budget. Enjoy flexible pricing options with full access to all premium features
+          Choose the Swasthi plan that fits your needs and budget. Enjoy
+          flexible pricing options with full access to all premium features
         </p>
       </div>
 
-      <img
+      <Image
+        unoptimized={true}
+        quality={100}
+        width={20}
+        height={20}
         src="./Buttons.png"
         alt="trial"
         className="w-[80%] sm:w-[60%] md:w-[300px] mx-auto cursor-pointer"

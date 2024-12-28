@@ -1,7 +1,6 @@
+import Image from "next/image";
 
 export default function DetailedProgress() {
- 
-
   return (
     <div className="flex flex-col w-full overflow-hidden md:flex-row justify-between px-4 md:px-10">
       <div
@@ -46,7 +45,14 @@ export default function DetailedProgress() {
             data-aos-delay="600"
           >
             <div className="w-10 md:w-16 my-0.5">
-              <img src="/check_circle.png" alt="check_circle" />
+              <Image
+                unoptimized={true}
+                quality={100}
+                width={50}
+                height={50}
+                src="/check_circle.png"
+                alt="check_circle"
+              />
             </div>
             <div className="space-y-2 mr-5">
               <p className="font-roboto text-[14px] md:text-[20px] font-bold leading-[18px] md:leading-[23.44px] text-left text-neutral-50">
@@ -65,7 +71,14 @@ export default function DetailedProgress() {
             data-aos-delay="800"
           >
             <div className="w-10 md:w-16 my-0.5">
-              <img src="/check_circle.png" alt="check_circle" />
+              <Image
+                unoptimized={true}
+                quality={100}
+                width={50}
+                height={50}
+                src="/check_circle.png"
+                alt="check_circle"
+              />
             </div>
             <div className="space-y-2 mr-5">
               <p className="font-roboto text-[14px] md:text-[20px] font-bold leading-[18px] md:leading-[23.44px] text-left text-neutral-50">
@@ -84,7 +97,14 @@ export default function DetailedProgress() {
             data-aos-delay="1000"
           >
             <div className="w-10 md:w-16 my-0.5">
-              <img src="/check_circle.png" alt="check_circle" />
+              <Image
+                unoptimized={true}
+                quality={100}
+                width={50}
+                height={50}
+                src="/check_circle.png"
+                alt="check_circle"
+              />
             </div>
             <div className="space-y-2 mr-5">
               <p className="font-roboto text-[14px] md:text-[20px] font-bold leading-[18px] md:leading-[23.44px] text-left text-neutral-50">
@@ -100,10 +120,14 @@ export default function DetailedProgress() {
         </div>
       </div>
       <div className="w-full md:w-[500px] h-auto md:h-[600px] flex flex-col items-center md:mr-11 mt-4 md:mt-0 px-4 md:px-0 cursor-pointer animate-floating">
-        <img
+        <Image
+          unoptimized={true}
+          quality={100}
+          width={300}
+          height={300}
           src="/Group 1000005330.png"
           alt="Health Progress Visualization"
-          className="w-full max-w-xs md:max-w-full"
+          className="w-full max-w-xs md:max-w-full z-50"
         />
       </div>
     </div>
